@@ -10,10 +10,9 @@ class MinMaxStack:
             return
 
     def pop(self):
-        if len(self.stack) > 0:
-            return self.stack.pop()
-        else:
-            return
+        if len(self.minmaxstack) > 0:
+            self.minmaxstack.pop()
+        return self.stack.pop()
 
     def push(self, number):
         min_max = {"min": number, "max": number}
@@ -35,6 +34,12 @@ if __name__ == "__main__":
     Stack.push(4)
     Stack.push(5)
     Stack.push(1)
-    print(Stack.peek())
-    print(Stack.getMaxStack())
-    print(Stack.getMinStack())
+    print("Top Element in Stack Is: ", Stack.peek())
+    print("Max Element in Stack Is: ", Stack.getMaxStack())
+    print("Min Element in Stack Is: ", Stack.getMinStack())
+    Stack.pop() 
+    # Stack.pop()
+    print("Top Element in Stack Is: ", Stack.peek())
+    print("Max Element in Stack Is: ", Stack.getMaxStack())
+    print("Min Element in Stack Is: ", Stack.getMinStack())
+    
