@@ -24,7 +24,7 @@ class Solution:
                 graph[course1].append(course2)
             else:
                 graph[course1] = [course2]
-        # print(graph)
+        print(graph)
 
         # now look for cycle in graph
         seen = [False] * numCourses
